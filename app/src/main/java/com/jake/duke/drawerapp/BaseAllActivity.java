@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 /**
  * Created by root on 18/01/18.
@@ -116,10 +117,14 @@ public abstract class BaseAllActivity extends AppCompatActivity implements MenuI
     public boolean onMenuItemClick(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.item1:
-                Log.e("item1", "item1");
+                navigation_view.setCheckedItem(R.id.item1);
+                Toast.makeText(getApplicationContext(),getResources().getString(R.string.home),Toast.LENGTH_LONG).show();
+                mDrawerLayout.closeDrawers();
                 break;
             case R.id.item2:
-                Log.e("item2", "item2");
+                navigation_view.setCheckedItem(R.id.item2);
+                Toast.makeText(getApplicationContext(),getResources().getString(R.string.settings),Toast.LENGTH_LONG).show();
+                mDrawerLayout.closeDrawers();
                 break;
             // and so on...
         }
