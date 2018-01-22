@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DrawerApp</string>
+    <string name="header">App Header Bar</string>
+    <string name="footer">App Footer Bar</string>
+</resources>
